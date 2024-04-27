@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
 import {
     Container,
@@ -11,7 +11,7 @@ const Assorteds: React.FC = () => {
     const [verseData, setVerseData] = useState<any>(null);
 
     const loadContent = async () => {
-        const data = await fetchVerse('João+3:16', 'almeida');
+        const data = await fetchVerse('Salmos+1:3', 'almeida');
         setVerseData(data);
     };
 
@@ -20,7 +20,12 @@ const Assorteds: React.FC = () => {
     }, []);
 
     return (
-        <View style={{marginTop: 32}}>
+        <View style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+            alignSelf: 'center',
+        }}>
             {verseData ? (
                 <Text>{verseData.text}</Text>
             ) : (
