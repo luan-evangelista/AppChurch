@@ -20,12 +20,13 @@ const Assorteds: React.FC = () => {
     }, []);
 
     return (
-        <View style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignSelf: 'center',
-        }}>
+        <View
+            style={{
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'center',
+                alignSelf: 'center',
+            }}>
             {verseData ? (
                 <Text>{verseData.text}</Text>
             ) : (
